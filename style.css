@@ -21,7 +21,7 @@ body {
   justify-content: space-around;
 }
 .dunk {
-  position: relative;
+  position: absolute;
   width: 50px;
   height: 200px;
   background: brown;
@@ -56,17 +56,22 @@ body {
   left: 0; bottom: 0;
   width: 64px;
   height: 64px;
-  background: url(./images/bird.png);
+  background-image: url(./images/bird.png);
   background-size: 100% 100%;
   animation-name: bird;
   animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-play-state: paused;
   animation-timing-function: linear;
+  outline: 1px solid red;
 }
 
 .bird.play {
   animation-play-state: running;
+}
+
+.bird.dead {
+  background-color: red;
 }
 
 @keyframes bird {
