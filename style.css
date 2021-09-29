@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-flow: column;
+}
+
+#stage {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  background: skyblue;
+  display: flex;
+  justify-content: space-around;
+}
+.dunk {
+  position: relative;
+  width: 50px;
+  height: 200px;
+  background: brown;
+  animation-name: dunk;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  position: relative;
+}
+.dunk:nth-child(1) {
+  animation-timing-function: ease;
+}
+.dunk:nth-child(2) {
+  animation-timing-function: ease-in;
+  animation-duration: 1.2s;
+}
+.dunk:nth-child(3) {
+  animation-timing-function: ease-out;
+}
+.dunk:nth-child(4) {
+  animation-timing-function: ease-in-out;
+  animation-duration: 1.2s;
+}
+
+@keyframes dunk {
+  from { top: 0;}
+  to { top: 200px;}
+}
+
+.bird {
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 64px;
+  height: 64px;
+  background: url(./images/bird.png);
+  background-size: 100% 100%;
+  animation-name: bird;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+  animation-timing-function: linear;
+}
+
+.bird.play {
+  animation-play-state: running;
+}
+
+@keyframes bird {
+  from  { left: 0;}
+  to { left: 800px;}
+  
+}
+
+#moveBtn {
+  padding: 10px;
+  font-size: 24px;
+  margin-top: 1em;
+}
