@@ -70,6 +70,10 @@ body {
   animation-play-state: running;
 }
 
+.bird.paused {
+  animation-play-state: paused;
+}
+
 .bird.dead {
   background-color: red;
 }

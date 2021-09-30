@@ -9,10 +9,11 @@ $(function(){
       var myTop = Math.round($('.bird').position().top);
       var myLeft = Math.round($('.bird').position().left);
       if(eTop+200 > myTop && eLeft < myLeft+64 && eLeft+50 > myLeft) {
-        console.log('You Lose!');
-        $('.bird').addClass('dead');
-        // clearInterval(enemyMove);
-        // location.reload();
+        $('.bird').addClass('dead').removeClass('play');
+        clearInterval(enemyMove);
+        var a = confirm('You Lose!');
+        if (true || false) location.reload();
+
       } else {
         // $('.bird').removeClass('dead');
       }
